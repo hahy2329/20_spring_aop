@@ -14,7 +14,7 @@
 	<appender name="dailyFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
 		<param name="File" value="C:\\web_log\\logTest.log" />
 		<layout class="org.apache.log4j.PatternLayout">
-		  <param name="DatePattern"   value="'.'yyyy-MM-dd-HH-mm"/>
+		  <param name="DatePattern"   value="'.'yyyy-MM-dd"/>
 		  <param name="ConversionPattern"   value="[%d{HH:mm:ss}][%-5p](%F:%L)-%m%n"/>
 		</layout>
 	</appender>
@@ -71,10 +71,12 @@
 		<level value="info" />
 	</logger>
 
+<!-- 위에는 run할 때 console창에 찍히는 것들 info - > warn으로 바꾸면 warn이상으로 찍히는 걸 허용해 줄 수 있다.  -->
 	<!-- Root Logger -->
 	<root>
 		<priority value="warn" />
 		<appender-ref ref="console" />
+		<appender-ref ref="dailyFileAppender"/>
 	</root>
 	
 </log4j:configuration>

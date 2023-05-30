@@ -79,8 +79,8 @@ public class LoggerAdvice {
 		//System.out.println(pjp.getSignature().getName() + " 메서드 동작 시간 : " + (endTime - startTime) + "초");
 		
 		//logger.error(pjp.getSignature().getName() + " 메서드 동작 시간 : " + (endTime - startTime) + "초");
-		//logger.warn(pjp.getSignature().getName() + " 메서드 동작 시간 : " + (endTime - startTime) + "초");
-		logger.info(pjp.getSignature().getName() + " 메서드 동작 시간 : " + (endTime - startTime) + "초");
+		logger.warn(pjp.getSignature().getName() + " 메서드 동작 시간 : " + (endTime - startTime) + "초");
+		//logger.info(pjp.getSignature().getName() + " 메서드 동작 시간 : " + (endTime - startTime) + "초");
 		
 	}
 	
